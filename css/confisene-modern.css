@@ -311,6 +311,113 @@ h1, h2, h3, h4, h5, h6,
     border-radius: var(--begue-radius-lg);
 }
 
+/* ——— À propos : double image stylée ——— */
+.confisene-about-gallery {
+    position: relative;
+    min-height: 420px;
+    padding: 1.5rem 1rem 2.5rem 0;
+}
+
+.confisene-about-photo {
+    margin: 0;
+    border-radius: var(--begue-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--begue-shadow);
+    transition: var(--begue-transition);
+    background: var(--begue-white);
+}
+
+.confisene-about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.confisene-about-photo--main {
+    position: relative;
+    z-index: 1;
+    width: 78%;
+    aspect-ratio: 4 / 5;
+    border: 4px solid var(--begue-white);
+}
+
+.confisene-about-photo--accent {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 58%;
+    aspect-ratio: 16 / 10;
+    border: 4px solid var(--begue-yellow);
+    box-shadow: var(--begue-shadow-hover);
+}
+
+.confisene-about-photo--accent:hover,
+.confisene-about-photo--main:hover {
+    transform: translateY(-4px);
+}
+
+.confisene-about-caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0.65rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--begue-white);
+    background: linear-gradient(0deg, rgba(26, 26, 26, 0.75), transparent);
+}
+
+.confisene-about-caption--accent {
+    background: linear-gradient(0deg, rgba(45, 158, 63, 0.85), transparent);
+}
+
+.confisene-about-deco {
+    position: absolute;
+    top: 0;
+    right: 12%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(245, 197, 24, 0.25);
+    z-index: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 991.98px) {
+    .confisene-about-gallery {
+        min-height: 360px;
+        padding-right: 0;
+    }
+
+    .confisene-about-photo--main {
+        width: 72%;
+    }
+
+    .confisene-about-photo--accent {
+        width: 62%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .confisene-about-gallery {
+        min-height: 300px;
+    }
+
+    .confisene-about-photo--main {
+        width: 85%;
+    }
+
+    .confisene-about-photo--accent {
+        width: 70%;
+        right: -4px;
+    }
+}
+
 /* Feature / brand cards */
 .confisene-site .bg-light.bg-icon {
     background: var(--begue-gray) !important;
