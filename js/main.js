@@ -10,11 +10,29 @@
         }, 1);
     };
     spinner();
-    
-    
-    // Initiate the wowjs
-    new WOW().init();
 
+    // Initiate the wowjs
+    if (typeof WOW !== 'undefined') {
+        new WOW().init();
+    }
+
+    // Active nav link on scroll
+    var sections = $('section[id], div[id^="About"], div[id^="produit"], div[id^="contact"]');
+    var navLinks = $('.navbar-nav .nav-link[href^="#"]');
+    if (sections.length && navLinks.length) {
+        $(window).on('scroll', function () {
+            var scrollPos = $(window).scrollTop() + 120;
+            sections.each(function () {
+                var el = $(this);
+                var id = el.attr('id');
+                if (!id) return;
+                if (el.offset().top <= scrollPos && el.offset().top + el.outerHeight() > scrollPos) {
+                    navLinks.removeClass('active');
+                    navLinks.filter('[href="#' + id + '"]').addClass('active');
+                }
+            });
+        });
+    }
 
     // Fixed Navbar
     $(window).scroll(function () {

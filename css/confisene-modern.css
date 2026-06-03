@@ -1,0 +1,577 @@
+/**
+ * CONFISENE — Refonte visuelle 2026
+ * Palette : Vert Bégué, Jaune Bégué, Blanc, Noir doux, Gris clair
+ */
+
+:root {
+    --begue-green: #2d9e3f;
+    --begue-green-dark: #1f7a31;
+    --begue-yellow: #f5c518;
+    --begue-yellow-dark: #d4a810;
+    --begue-white: #ffffff;
+    --begue-black: #1a1a1a;
+    --begue-gray: #f0f2f5;
+    --begue-gray-mid: #6b7280;
+    --begue-shadow: 0 12px 40px rgba(26, 26, 26, 0.08);
+    --begue-shadow-hover: 0 20px 50px rgba(45, 158, 63, 0.18);
+    --begue-radius: 16px;
+    --begue-radius-lg: 24px;
+    --begue-transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.confisene-site {
+    font-family: "Plus Jakarta Sans", "Open Sans", system-ui, sans-serif;
+    color: var(--begue-black);
+    background: var(--begue-white);
+    padding-top: 145px;
+    overflow-x: hidden;
+}
+
+@media (max-width: 991.98px) {
+    body.confisene-site {
+        padding-top: 100px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-family: "Plus Jakarta Sans", "Lora", serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.text-primary { color: var(--begue-green) !important; }
+.bg-primary { background-color: var(--begue-green) !important; }
+.text-secondary { color: var(--begue-yellow-dark) !important; }
+.bg-secondary { background-color: var(--begue-yellow) !important; }
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--begue-green), var(--begue-green-dark));
+    border: none;
+    box-shadow: 0 8px 24px rgba(45, 158, 63, 0.35);
+    transition: var(--begue-transition);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(45, 158, 63, 0.45);
+    background: linear-gradient(135deg, var(--begue-green-dark), var(--begue-green));
+}
+
+.btn-secondary,
+.btn-outline-primary {
+    transition: var(--begue-transition);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--begue-yellow), var(--begue-yellow-dark));
+    border: none;
+    color: var(--begue-black) !important;
+    font-weight: 600;
+}
+
+.btn-outline-primary {
+    border-color: var(--begue-green) !important;
+    color: var(--begue-green) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary.active {
+    background: var(--begue-green) !important;
+    color: var(--begue-white) !important;
+}
+
+/* ——— Top bar & Navbar ——— */
+.confisene-site .top-bar {
+    background: var(--begue-black);
+    border-bottom: none;
+    height: auto;
+    min-height: 45px;
+}
+
+.confisene-site .top-bar small,
+.confisene-site .top-bar a {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.confisene-site .top-bar .text-body {
+    color: rgba(255, 255, 255, 0.85) !important;
+    transition: var(--begue-transition);
+}
+
+.confisene-site .top-bar .text-body:hover {
+    color: var(--begue-yellow) !important;
+}
+
+.confisene-site #nav {
+    height: auto;
+    min-height: 80px;
+    background: rgba(255, 255, 255, 0.97) !important;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--begue-shadow);
+    transition: var(--begue-transition);
+}
+
+.confisene-site .navbar .navbar-nav .nav-link {
+    background: transparent !important;
+    opacity: 1;
+    color: var(--begue-black) !important;
+    font-weight: 600;
+    padding: 12px 18px !important;
+    border-radius: 999px;
+    transition: var(--begue-transition);
+}
+
+.confisene-site .navbar .navbar-nav .nav-link:hover,
+.confisene-site .navbar .navbar-nav .nav-link.active {
+    color: var(--begue-green) !important;
+    background: rgba(45, 158, 63, 0.08) !important;
+}
+
+.confisene-site #logo img {
+    width: 72px !important;
+    height: 72px !important;
+    object-fit: contain;
+    transition: var(--begue-transition);
+}
+
+.confisene-site .fixed-top.bg-white.shadow #nav {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ——— Hero ——— */
+.confisene-hero {
+    position: relative;
+    margin-bottom: 0 !important;
+}
+
+.confisene-hero #header-carousel {
+    min-height: 85vh;
+}
+
+.confisene-hero .carousel-inner,
+.confisene-hero .carousel-item {
+    min-height: 85vh;
+}
+
+.confisene-hero .carousel-item img {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.confisene-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, rgba(26, 26, 26, 0.75) 0%, rgba(26, 26, 26, 0.35) 45%, rgba(45, 158, 63, 0.25) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.confisene-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.confisene-hero-overlay .container {
+    pointer-events: auto;
+}
+
+.confisene-hero-badge {
+    display: inline-block;
+    background: var(--begue-yellow);
+    color: var(--begue-black);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+
+.confisene-hero-title {
+    color: var(--begue-white);
+    font-size: clamp(1.75rem, 4vw, 3.25rem);
+    line-height: 1.15;
+    max-width: 720px;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+    margin-bottom: 1rem;
+}
+
+.confisene-hero-subtitle {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    max-width: 560px;
+    margin-bottom: 2rem;
+}
+
+.confisene-hero-actions .btn {
+    padding: 0.85rem 1.75rem;
+    font-weight: 600;
+    border-radius: 999px;
+}
+
+.confisene-hero .carousel-control-prev-icon,
+.confisene-hero .carousel-control-next-icon {
+    background-color: var(--begue-green);
+    border-color: var(--begue-green);
+}
+
+@media (max-width: 768px) {
+    .confisene-hero #header-carousel,
+    .confisene-hero .carousel-inner,
+    .confisene-hero .carousel-item,
+    .confisene-hero .carousel-item img {
+        min-height: 70vh;
+        height: 70vh;
+    }
+}
+
+/* ——— Stats ——— */
+.confisene-stats {
+    background: var(--begue-white);
+    margin-top: -3rem;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 2rem;
+}
+
+.confisene-stat-card {
+    background: var(--begue-white);
+    border-radius: var(--begue-radius);
+    padding: 1.75rem 1.25rem;
+    box-shadow: var(--begue-shadow);
+    border: 1px solid rgba(45, 158, 63, 0.1);
+    transition: var(--begue-transition);
+    height: 100%;
+}
+
+.confisene-stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--begue-shadow-hover);
+}
+
+.confisene-stat-number {
+    display: block;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: var(--begue-green);
+    line-height: 1.1;
+}
+
+.confisene-stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--begue-gray-mid);
+    margin-top: 0.35rem;
+    font-weight: 500;
+}
+
+/* ——— Sections ——— */
+.confisene-section {
+    position: relative;
+}
+
+.confisene-section .section-header::before,
+.confisene-section .section-header::after {
+    background: var(--begue-green);
+}
+
+.confisene-section .section-header::after {
+    background: var(--begue-yellow);
+}
+
+.confisene-site #About h1.display-5 {
+    color: var(--begue-green) !important;
+    text-align: left !important;
+}
+
+.confisene-site .about-img {
+    border-radius: var(--begue-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--begue-shadow);
+}
+
+.confisene-site .about-img::before {
+    display: none;
+}
+
+.confisene-site .about-img img {
+    border-radius: var(--begue-radius-lg);
+}
+
+/* Feature / brand cards */
+.confisene-site .bg-light.bg-icon {
+    background: var(--begue-gray) !important;
+    background-image: none !important;
+}
+
+.confisene-feature-card {
+    border-radius: var(--begue-radius);
+    box-shadow: var(--begue-shadow);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: var(--begue-transition);
+}
+
+.confisene-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--begue-shadow-hover);
+}
+
+.confisene-site .bg-light.bg-icon video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: var(--begue-radius);
+    box-shadow: var(--begue-shadow);
+    margin-bottom: 1.5rem;
+}
+
+/* Products */
+.confisene-site .product-item {
+    border-radius: var(--begue-radius);
+    overflow: hidden;
+    background: var(--begue-white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: var(--begue-transition);
+}
+
+.confisene-site .product-item:hover {
+    box-shadow: var(--begue-shadow-hover);
+    transform: translateY(-6px);
+}
+
+.confisene-site .product-item .position-relative {
+    border-radius: var(--begue-radius) var(--begue-radius) 0 0;
+    overflow: hidden;
+}
+
+.confisene-site .product-item img {
+    transition: transform 0.6s ease;
+}
+
+.confisene-site .product-item:hover img {
+    transform: scale(1.06);
+}
+
+/* Values / testimonials */
+.confisene-site .testimonial-item {
+    border-radius: var(--begue-radius);
+    box-shadow: var(--begue-shadow);
+    border: none;
+}
+
+.confisene-site .testimonial-carousel .owl-item.center .testimonial-item {
+    background: linear-gradient(135deg, var(--begue-green), var(--begue-green-dark)) !important;
+}
+
+/* CTA band */
+.confisene-site .container-fluid.bg-primary.bg-icon {
+    background: linear-gradient(135deg, var(--begue-green-dark), var(--begue-green)) !important;
+    background-image: none !important;
+    border-radius: 0;
+}
+
+.confisene-site .container-fluid.bg-primary.bg-icon video {
+    border-radius: var(--begue-radius);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contact */
+.confisene-contact-card {
+    border-radius: var(--begue-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--begue-shadow);
+}
+
+.confisene-site #contact .bg-primary {
+    background: linear-gradient(160deg, var(--begue-green-dark), var(--begue-green)) !important;
+    border-radius: var(--begue-radius-lg);
+}
+
+.confisene-site #contact iframe {
+    width: 100% !important;
+    max-width: 100%;
+    border-radius: var(--begue-radius-lg);
+    min-height: 400px;
+}
+
+.confisene-site #contact .form-control,
+.confisene-site #contact .form-floating label {
+    border-radius: 12px;
+}
+
+.confisene-site #contact .form-control:focus {
+    border-color: var(--begue-green);
+    box-shadow: 0 0 0 0.2rem rgba(45, 158, 63, 0.2);
+}
+
+/* Blog / nouveaux produits */
+.confisene-site .container-xxl.py-5 .position-relative.bg-light,
+.confisene-site .container-xxl.py-5 > .container > .row > div > img {
+    border-radius: var(--begue-radius);
+    overflow: hidden;
+    transition: var(--begue-transition);
+}
+
+.confisene-site .container-xxl.py-5 .bg-light.p-4 {
+    border-radius: 0 0 var(--begue-radius) var(--begue-radius);
+    box-shadow: var(--begue-shadow);
+}
+
+.confisene-site .container-xxl.py-5 .row > div:hover img {
+    transform: scale(1.03);
+}
+
+/* Footer */
+.confisene-site .footer {
+    background: var(--begue-black) !important;
+}
+
+.confisene-site .footer .btn-link:hover {
+    color: var(--begue-yellow) !important;
+}
+
+/* Spinner */
+.confisene-site #spinner .spinner-border {
+    color: var(--begue-green) !important;
+}
+
+.confisene-site .back-to-top {
+    background: var(--begue-green) !important;
+    border: none;
+    box-shadow: var(--begue-shadow);
+}
+
+/* Corporate blocks */
+.confisene-corporate-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(45, 158, 63, 0.1);
+    color: var(--begue-green);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.confisene-mission-grid .confisene-mission-item {
+    padding: 1.5rem;
+    background: var(--begue-gray);
+    border-radius: var(--begue-radius);
+    height: 100%;
+    border-left: 4px solid var(--begue-yellow);
+}
+
+.confisene-mission-item h5 {
+    color: var(--begue-green);
+    margin-bottom: 0.75rem;
+}
+
+/* Remove legacy inline colors */
+.confisene-site [style*="greenyellow"] {
+    color: var(--begue-green) !important;
+}
+
+/* Gallery page */
+body.confisene-gallery {
+    font-family: "Plus Jakarta Sans", "Open Sans", sans-serif;
+    background: var(--begue-gray);
+    color: var(--begue-black);
+    margin: 0;
+    padding: 0;
+}
+
+.confisene-gallery-header {
+    background: linear-gradient(135deg, var(--begue-green-dark), var(--begue-green));
+    color: white;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.confisene-gallery-header h1 {
+    margin: 0 0 0.5rem;
+    font-size: 1.75rem;
+}
+
+.confisene-gallery-nav {
+    padding: 1rem;
+    text-align: center;
+}
+
+.confisene-gallery-nav .btn-primary {
+    background: var(--begue-green);
+    border-radius: 999px;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.confisene-gallery-body {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.confisene-gallery-section-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--begue-green);
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--begue-yellow);
+}
+
+.confisene-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+
+.confisene-gallery-grid img.lightboxed {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: var(--begue-radius);
+    box-shadow: var(--begue-shadow);
+    transition: var(--begue-transition);
+    cursor: pointer;
+}
+
+.confisene-gallery-grid img.lightboxed:hover {
+    transform: scale(1.03);
+    box-shadow: var(--begue-shadow-hover);
+}
+
+.confisene-gallery-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.confisene-gallery-videos video {
+    width: 100%;
+    border-radius: var(--begue-radius);
+    box-shadow: var(--begue-shadow);
+}
+
+/* Hide third-party ad placeholders on gallery */
+.confisene-gallery #carbon-block,
+.confisene-gallery div[style*="margin:30px auto"] {
+    display: none !important;
+}

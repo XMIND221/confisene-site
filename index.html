@@ -2,10 +2,22 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <title>Confisen-sn</title>
+        <title>CONFISEN — Confiserie Bégué | Bonbons, sucettes et biscuits au Sénégal</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta content="CONFISEN" name="keywords" />
-        <meta content="CONFISEN" name="description" />
+        <meta content="CONFISEN, Bégué, confiserie, bonbons, sucettes, biscuits, Sénégal, Dakar, Mbao, agroalimentaire" name="keywords" />
+        <meta content="CONFISEN fabrique et commercialise sous la marque Bégué des bonbons, sucettes et biscuits 100% Made in Sénégal depuis 2010. Zone industrielle de Mbao, Dakar." name="description" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.confisene.sn/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.confisene.sn/" />
+        <meta property="og:title" content="CONFISEN — Confiserie Bégué" />
+        <meta property="og:description" content="Fabrication de bonbons, sucettes et biscuits sous la marque Bégué. Confiserie sénégalaise depuis 2010." />
+        <meta property="og:image" content="https://www.confisene.sn/img/logo.png" />
+        <meta property="og:locale" content="fr_SN" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="CONFISEN — Confiserie Bégué" />
+        <meta name="twitter:description" content="Bonbons, sucettes et biscuits Made in Sénégal." />
+        <meta name="twitter:image" content="https://www.confisene.sn/img/logo.png" />
 
         <!-- Favicon -->
         <link href="img/logo.png" rel="icon" />
@@ -13,7 +25,7 @@
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Lora:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
         <!-- Icon Font Stylesheet -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
@@ -28,9 +40,28 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet" />
+        <link href="css/confisene-modern.css" rel="stylesheet" />
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "CONFISEN",
+            "url": "https://www.confisene.sn",
+            "logo": "https://www.confisene.sn/img/logo.png",
+            "email": "contact@confisene.sn",
+            "telephone": "+221338549955",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Zone industrielle de Mbao, Km 18 Route Rufisque",
+                "addressLocality": "Dakar",
+                "addressCountry": "SN"
+            },
+            "description": "Fabrication de bonbons, sucettes et biscuits sous la marque Bégué."
+        }
+        </script>
     </head>
 
-    <body>
+    <body class="confisene-site">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" role="status"></div>
@@ -42,7 +73,7 @@
             <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
                 <div class="col-lg-6 px-5 text-start">
                     <small style="color: white;"><i class="fa fa-map-marker-alt me-2" style="color: white;"></i>Zone industrielle de Mbao, Dakar – SENEGAL</small>
-                    <small class="ms-4" style="color: white;"><i class="fa fa-envelope me-2"></i><a style="color: white;" href="mailto:mailto:contact@confisene.sn">contact@confisene.sn</a></small>
+                    <small class="ms-4" style="color: white;"><i class="fa fa-envelope me-2"></i><a style="color: white;" href="mailto:contact@confisene.sn">contact@confisene.sn</a></small>
                 </div>
                 <div class="col-lg-6 px-5 text-end">
                     <small>Suivez nous:</small>
@@ -84,7 +115,7 @@
         <!-- Navbar End -->
 
         <!-- Carousel Start -->
-        <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <section class="container-fluid p-0 confisene-hero wow fadeIn" data-wow-delay="0.1s" aria-label="Bannière principale">
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -100,29 +131,73 @@
                         <img class="w-100" src="img/carousel-slide-4.png" alt="Carrousel Confisen 4" />
                     </div>
                 </div>
+                <div class="confisene-hero-overlay">
+                    <div class="container">
+                        <span class="confisene-hero-badge wow fadeInDown" data-wow-delay="0.2s">Marque Bégué — Made in Sénégal</span>
+                        <h1 class="confisene-hero-title wow fadeInUp" data-wow-delay="0.3s">Notre spécialité : la fabrication de bonbons, sucettes et biscuits.</h1>
+                        <p class="confisene-hero-subtitle wow fadeInUp" data-wow-delay="0.4s">La société CONFISEN commercialise ses confiseries sous la marque déposée « Bégué » depuis 2010, à la Zone industrielle de Mbao, Dakar – SENEGAL.</p>
+                        <div class="confisene-hero-actions wow fadeInUp" data-wow-delay="0.5s">
+                            <a href="#produit" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-2 mb-2">Découvrir nos produits</a>
+                            <a href="#contact" class="btn btn-secondary rounded-pill py-sm-3 px-sm-5 mb-2">Nous contacter</a>
+                        </div>
+                    </div>
+                </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="visually-hidden">Précédent</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="visually-hidden">Suivant</span>
                 </button>
-            </div >
-        </div>
+            </div>
+        </section>
         <!-- Carousel End -->
 
+        <!-- Chiffres clés -->
+        <section class="confisene-stats confisene-section">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="confisene-stat-card">
+                            <span class="confisene-stat-number">2010</span>
+                            <span class="confisene-stat-label">Année de création de CONFISEN</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="confisene-stat-card">
+                            <span class="confisene-stat-number">100%</span>
+                            <span class="confisene-stat-label">Produits Made in Sénégal</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="confisene-stat-card">
+                            <span class="confisene-stat-number">Bégué</span>
+                            <span class="confisene-stat-label">Marque déposée — bonbons, sucettes, biscuits</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="confisene-stat-card">
+                            <span class="confisene-stat-number">4</span>
+                            <span class="confisene-stat-label">Saveurs phares de sucettes Bégué</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- About Start -->
-        <div class="container-xxl py-5" id="About">
+        <div class="container-xxl py-5 confisene-section" id="About">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                         <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                            <img class="img-fluid w-100" src="img/10.jpg" />
+                            <img class="img-fluid w-100" src="img/10.jpg" alt="Usine et produits CONFISEN Bégué" />
                         </div>
                     </div>
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                        <h1 class="display-5 mb-4" style="color: greenyellow; text-align: center;">Notre spécialité : la fabrication de bonbons, sucettes et biscuits.</h1>
+                        <span class="confisene-corporate-pill"><i class="fa fa-industry"></i> À propos de CONFISEN</span>
+                        <h1 class="display-5 mb-4">Notre spécialité : la fabrication de bonbons, sucettes et biscuits.</h1>
                         <p class="mb-4">
                             La société CONFISEN a été créée en 2010, son activité principale est la fabrication de bonbons, sucettes et biscuits. Les produits de la société sont commercialisés sous la marque déposée « Bégué ». Le capital de
                             la société est entièrement détenu par des sénégalais, son lieu d’implantation actuel est à la Zone industrielle de Mbao, Dakar – SENEGAL.
@@ -130,6 +205,26 @@
                         <p><i class="fa fa-check text-primary me-3"></i>Bonbon</p>
                         <p><i class="fa fa-check text-primary me-3"></i>Sucette</p>
                         <p><i class="fa fa-check text-primary me-3"></i>Biscuit</p>
+                        <div class="row g-3 confisene-mission-grid mt-3">
+                            <div class="col-md-4">
+                                <div class="confisene-mission-item">
+                                    <h5>Mission</h5>
+                                    <p class="mb-0 small">Assurer un excellent rapport qualité-prix et couvrir les besoins de nos précieux clients en toutes circonstances.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="confisene-mission-item">
+                                    <h5>Vision</h5>
+                                    <p class="mb-0 small">Grâce à notre ambition et notre vision, les bonbons « Bégué » occupent une place de choix sur le marché de la confiserie au Sénégal et dans le monde.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="confisene-mission-item">
+                                    <h5>Valeurs</h5>
+                                    <p class="mb-0 small">CONFISEN est une société sénégalaise ; nos produits sont 100% Made in Sénégal, au service de la jeunesse et de nos clients.</p>
+                                </div>
+                            </div>
+                        </div>
                         <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="#produit">Voir Plus</a>
                     </div>
                 </div>
@@ -138,7 +233,7 @@
         <!-- About End -->
 
         <!-- Feature Start -->
-        <div class="container-fluid bg-light bg-icon my-5 py-6">
+        <div class="container-fluid bg-light bg-icon my-5 py-6 confisene-section">
             <div class="container">
                 <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                     <h1 class="display-5 mb-3">Bégué une confiserie Proche de ses clients</h1>
@@ -147,11 +242,13 @@
                     </p>
                 </div>
                 <div class="row g-4">
-                    <video width="400" height="300" controls>
-                        <source src="videos/gin.mp4" type=video/mp4>
-                    </video>
+                    <div class="col-12 wow fadeInUp" data-wow-delay="0.05s">
+                        <video width="400" height="300" controls>
+                            <source src="videos/gin.mp4" type="video/mp4" />
+                        </video>
+                    </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <div class="bg-white text-center h-100 p-4 p-xl-5 confisene-feature-card">
                             <img class="img-fluid mb-4" src="img/logo.png" alt="" />
                             <h4 class="mb-3">La confiserie</h4>
                             <p class="mb-4">CONFISEN est une société sénégalaise et nos produits sont 100% Made in Sénégal.</p>
@@ -159,7 +256,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <div class="bg-white text-center h-100 p-4 p-xl-5 confisene-feature-card">
                             <img class="img-fluid mb-4" src="img/Bégué.png" alt="" />
                             <h4 class="mb-3">La marque Bégué</h4>
                             <p class="mb-4">C'est sous la marque déposée Bégué, que nos confiseries sont commercialisées.</p>
@@ -167,7 +264,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <div class="bg-white text-center h-100 p-4 p-xl-5 confisene-feature-card">
                             <img class="img-fluid mb-4" src="img/bonbon.png" alt="" />
                             <h4 class="mb-3">Nos produits</h4>
                             <p class="mb-4">Nous fabriquons des sucettes et des bonbons aux différentes saveurs.</p>
@@ -180,7 +277,7 @@
         <!-- Feature End -->
 
         <!-- Product Start -->
-        <div class="container-xxl py-5" id="produit">
+        <div class="container-xxl py-5 confisene-section" id="produit">
             <div class="container">
                 <div class="row g-0 gx-5 align-items-end">
                     <div class="col-lg-6">
@@ -754,7 +851,7 @@
                     <div class="col-md-5 text-md-end wow fadeIn" data-wow-delay="0.5s">
                         <!-- <img src="img/begue2.jpg" width=500px;height=500px> -->
                         <video width="500" height="300" controls>
-                            <source src="videos/suc.mp4" type=video/mp4 autoplay>
+                            <source src="videos/suc.mp4" type="video/mp4" />
                         </video>
                         <!-- <a class="btn btn-lg btn-secondary rounded-pill py-3 px-5" href="#">voir Plus</a> -->
                     </div>
@@ -821,7 +918,7 @@
         </div>
         <!-- Testimonial End -->
 
-        <div class="container-xxl py-6" id="contact">
+        <div class="container-xxl py-6 confisene-section" id="contact">
             <div class="container">
                 <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                     <h1 class="display-5 mb-3">Contacts</h1>
@@ -829,7 +926,7 @@
                 </div>
                 <div class="row g-5 justify-content-center">
                     <div class="col-lg-5 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="bg-primary text-white d-flex flex-column justify-content-center h-100 p-5">
+                        <div class="bg-primary text-white d-flex flex-column justify-content-center h-100 p-5 confisene-contact-card">
                             <h5 class="text-white">Telephone</h5>
                             <p class="mb-5"><i class="fa fa-phone-alt me-3"></i>+221 33 854 99 55</p>
                             <h5 class="text-white">Email</h5>
@@ -847,48 +944,51 @@
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                        <form>
+                        <div class="bg-white p-4 p-lg-5 rounded confisene-contact-card mb-4">
+                            <form action="mailto:contact@confisene.sn" method="post" enctype="text/plain">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name" name="name" />
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email" name="email" />
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject" />
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 200px"></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Envoyé</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="confisene-contact-card overflow-hidden">
                             <iframe
+                                title="Carte Zone industrielle de Mbao"
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3858.448892323976!2d-17.3404584!3d14.7437216!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec10bba11a2b6e1%3A0x24774aec3ad9db21!2sSapeur%20Pompier%20Zone%20Franche%20Industrielle!5e0!3m2!1sfr!2ssn!4v1683904315174!5m2!1sfr!2ssn"
                                 width="600"
-                                height="600"
+                                height="450"
                                 style="border: 0;"
                                 allowfullscreen=""
                                 loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"
                             ></iframe>
-                        </form>
-                        <!-- <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 200px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Envoyé</button>
-                            </div>
                         </div>
-                    </form> -->
                     </div>
                 </div>
             </div>
@@ -897,7 +997,7 @@
         <!-- Contact End -->
 
         <!-- Blog Start -->
-        <div class="container-xxl py-5">
+        <div class="container-xxl py-5 confisene-section">
             <div class="container">
                 <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                     <h1 class="display-5 mb-3">Nouveaux Produits</h1>
