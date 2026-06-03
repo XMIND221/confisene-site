@@ -575,3 +575,115 @@ body.confisene-gallery {
 .confisene-gallery div[style*="margin:30px auto"] {
     display: none !important;
 }
+
+/* ——— Typographie sections ——— */
+.confisene-eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--begue-green);
+    margin-bottom: 0.5rem;
+}
+
+.confisene-heading {
+    color: var(--begue-black);
+}
+
+.confisene-site .display-5 {
+    text-transform: none;
+}
+
+/* ——— Carrousel indicateurs ——— */
+.confisene-carousel-indicators {
+    z-index: 3;
+    margin-bottom: 2rem;
+}
+
+.confisene-carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--begue-white);
+    opacity: 0.6;
+    border: none;
+}
+
+.confisene-carousel-indicators .active {
+    opacity: 1;
+    background-color: var(--begue-yellow);
+}
+
+/* ——— Produits ——— */
+.confisene-product-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    background: var(--begue-yellow);
+    color: var(--begue-black);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+}
+
+.confisene-product-tabs .btn {
+    pointer-events: none;
+}
+
+.confisene-product-tabs a.btn {
+    pointer-events: auto;
+}
+
+/* ——— Vidéos ——— */
+.confisene-video-block {
+    border-radius: var(--begue-radius-lg);
+    overflow: hidden;
+}
+
+.confisene-video-label {
+    font-weight: 600;
+    color: var(--begue-green);
+    margin-bottom: 0.75rem;
+}
+
+.confisene-site .confisene-video-block video {
+    border-radius: var(--begue-radius-lg);
+    box-shadow: var(--begue-shadow);
+}
+
+/* ——— Galerie : barre de navigation unifiée ——— */
+.confisene-gallery-topnav {
+    background: var(--begue-white);
+    box-shadow: var(--begue-shadow);
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.confisene-gallery-topnav img {
+    height: 56px;
+    width: auto;
+}
+
+.confisene-gallery-topnav-links a {
+    color: var(--begue-black);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.confisene-gallery-topnav-links a:hover {
+    color: var(--begue-green);
+}
