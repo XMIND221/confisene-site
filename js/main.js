@@ -95,3 +95,23 @@
     
 })(jQuery);
 
+// Hero carousel — indépendant de jQuery
+(function () {
+    function initHeroCarousel() {
+        var heroEl = document.getElementById('header-carousel');
+        if (!heroEl || typeof bootstrap === 'undefined') return;
+        var heroCarousel = bootstrap.Carousel.getOrCreateInstance(heroEl, {
+            interval: 5000,
+            pause: 'hover',
+            wrap: true,
+            touch: true
+        });
+        heroCarousel.cycle();
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initHeroCarousel);
+    } else {
+        initHeroCarousel();
+    }
+})();
+
