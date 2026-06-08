@@ -116,7 +116,7 @@
 
         <!-- Carousel Start -->
         <section class="container-fluid p-0 confisene-hero wow fadeIn" data-wow-delay="0.1s" aria-label="Bannière principale">
-            <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="header-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
                 <div class="carousel-indicators confisene-carousel-indicators">
                     <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -125,16 +125,24 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item confisene-slide confisene-slide-1 active">
-                        <img class="w-100 confisene-slide-img" src="img/carousel-slide-1.png" alt="Bannière Bégué — Confiserie CONFISEN" fetchpriority="high" />
+                        <div class="confisene-slide-frame">
+                            <img class="confisene-slide-img" src="img/carousel-slide-1.png" alt="Bannière Bégué — Confiserie CONFISEN" fetchpriority="high" />
+                        </div>
                     </div>
                     <div class="carousel-item confisene-slide confisene-slide-2">
-                        <img class="w-100 confisene-slide-img" src="img/carousel-slide-2.png" alt="Produits Bégué CONFISEN" loading="lazy" />
+                        <div class="confisene-slide-frame">
+                            <img class="confisene-slide-img" src="img/carousel-slide-2.png" alt="Produits Bégué CONFISEN" loading="lazy" />
+                        </div>
                     </div>
                     <div class="carousel-item confisene-slide confisene-slide-3">
-                        <img class="w-100 confisene-slide-img" src="img/carousel-slide-3.png" alt="Marque Bégué au Sénégal" loading="lazy" />
+                        <div class="confisene-slide-frame">
+                            <img class="confisene-slide-img" src="img/carousel-slide-3.png" alt="Marque Bégué au Sénégal" loading="lazy" />
+                        </div>
                     </div>
                     <div class="carousel-item confisene-slide confisene-slide-4">
-                        <img class="w-100 confisene-slide-img" src="img/carousel-slide-4.png" alt="CONFISEN Zone industrielle de Mbao" loading="lazy" />
+                        <div class="confisene-slide-frame">
+                            <img class="confisene-slide-img" src="img/carousel-slide-4.png" alt="CONFISEN Zone industrielle de Mbao" loading="lazy" />
+                        </div>
                     </div>
                 </div>
                 <div class="confisene-hero-overlay">

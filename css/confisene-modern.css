@@ -149,26 +149,31 @@ h1, h2, h3, h4, h5, h6,
     margin-bottom: 0 !important;
 }
 
-.confisene-hero #header-carousel {
-    min-height: 85vh;
-}
-
+.confisene-hero #header-carousel,
 .confisene-hero .carousel-inner,
-.confisene-hero .carousel-item {
+.confisene-hero .confisene-slide-frame {
+    height: 85vh;
     min-height: 85vh;
 }
 
-/* Hero slides — contain par défaut pour préserver logos, visages et produits */
+/* Ne pas toucher display sur .carousel-item — Bootstrap gère les transitions */
 .confisene-hero .carousel-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
 }
 
-.confisene-hero .carousel-item img.confisene-slide-img {
+.confisene-hero .confisene-slide-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 85vh;
+}
+
+.confisene-hero .confisene-slide-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
     object-position: center center;
     position: static !important;
@@ -248,6 +253,11 @@ h1, h2, h3, h4, h5, h6,
     border-radius: 999px;
 }
 
+.confisene-hero .carousel-control-prev,
+.confisene-hero .carousel-control-next {
+    z-index: 3;
+}
+
 .confisene-hero .carousel-control-prev-icon,
 .confisene-hero .carousel-control-next-icon {
     background-color: var(--begue-green);
@@ -255,120 +265,59 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ——— Hero carousel responsive (Bootstrap breakpoints) ——— */
+/* contain sur tous les breakpoints : image entière, pas de coupe visage/produit */
 
-/* xs / sm : < 768px — image entière, hauteur 70vh */
+/* xs / sm : < 768px */
 @media (max-width: 767.98px) {
     .confisene-hero #header-carousel,
     .confisene-hero .carousel-inner,
-    .confisene-hero .carousel-item,
-    .confisene-hero .carousel-item img.confisene-slide-img {
-        min-height: 70vh;
+    .confisene-hero .confisene-slide-frame {
         height: 70vh;
+        min-height: 70vh;
     }
 
-    /* Slide 1 : homme + sachet à droite, logo à gauche */
-    .confisene-hero .confisene-slide-1 img.confisene-slide-img {
-        object-position: 58% center;
+    /* Annule les règles legacy de style.css sur le hero */
+    .confisene-hero #header-carousel .carousel-item {
+        position: static;
+        min-height: 0;
     }
 
-    /* Slide 2 : sucettes à gauche, enfant à droite */
-    .confisene-hero .confisene-slide-2 img.confisene-slide-img {
-        object-position: 50% center;
-    }
-
-    /* Slide 3 : femme + produit à droite */
-    .confisene-hero .confisene-slide-3 img.confisene-slide-img {
-        object-position: 62% 42%;
-    }
-
-    /* Slide 4 : homme + bonbon géant à droite */
-    .confisene-hero .confisene-slide-4 img.confisene-slide-img {
-        object-position: 65% 42%;
-    }
+    .confisene-hero .confisene-slide-1 .confisene-slide-img { object-position: 58% center; }
+    .confisene-hero .confisene-slide-2 .confisene-slide-img { object-position: 50% center; }
+    .confisene-hero .confisene-slide-3 .confisene-slide-img { object-position: 62% center; }
+    .confisene-hero .confisene-slide-4 .confisene-slide-img { object-position: 65% center; }
 }
 
-/* md : 768px – 991px — tablette, image entière */
+/* md : 768px – 991px */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .confisene-hero .confisene-slide-1 img.confisene-slide-img {
-        object-position: 55% 44%;
-    }
-
-    .confisene-hero .confisene-slide-2 img.confisene-slide-img {
-        object-position: 48% 50%;
-    }
-
-    .confisene-hero .confisene-slide-3 img.confisene-slide-img {
-        object-position: 58% 40%;
-    }
-
-    .confisene-hero .confisene-slide-4 img.confisene-slide-img {
-        object-position: 60% 42%;
-    }
+    .confisene-hero .confisene-slide-1 .confisene-slide-img { object-position: 55% center; }
+    .confisene-hero .confisene-slide-2 .confisene-slide-img { object-position: 50% center; }
+    .confisene-hero .confisene-slide-3 .confisene-slide-img { object-position: 60% center; }
+    .confisene-hero .confisene-slide-4 .confisene-slide-img { object-position: 62% center; }
 }
 
-/* lg : 992px – 1199px — image entière (contain), léger décalage visuel */
+/* lg : 992px – 1199px */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    .confisene-hero .confisene-slide-1 img.confisene-slide-img {
-        object-position: 54% 44%;
-    }
-
-    .confisene-hero .confisene-slide-2 img.confisene-slide-img {
-        object-position: 50% 50%;
-    }
-
-    .confisene-hero .confisene-slide-3 img.confisene-slide-img {
-        object-position: 56% 40%;
-    }
-
-    .confisene-hero .confisene-slide-4 img.confisene-slide-img {
-        object-position: 58% 42%;
-    }
+    .confisene-hero .confisene-slide-1 .confisene-slide-img { object-position: 54% center; }
+    .confisene-hero .confisene-slide-2 .confisene-slide-img { object-position: 50% center; }
+    .confisene-hero .confisene-slide-3 .confisene-slide-img { object-position: 58% center; }
+    .confisene-hero .confisene-slide-4 .confisene-slide-img { object-position: 60% center; }
 }
 
-/* xl : 1200px – 1399px — desktop large, cover affiné */
+/* xl : 1200px – 1399px */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
-    .confisene-hero .carousel-item img.confisene-slide-img {
-        object-fit: cover;
-    }
-
-    .confisene-hero .confisene-slide-1 img.confisene-slide-img {
-        object-position: 56% 42%;
-    }
-
-    .confisene-hero .confisene-slide-2 img.confisene-slide-img {
-        object-position: 49% 48%;
-    }
-
-    .confisene-hero .confisene-slide-3 img.confisene-slide-img {
-        object-position: 58% 38%;
-    }
-
-    .confisene-hero .confisene-slide-4 img.confisene-slide-img {
-        object-position: 60% 40%;
-    }
+    .confisene-hero .confisene-slide-1 .confisene-slide-img { object-position: 52% center; }
+    .confisene-hero .confisene-slide-2 .confisene-slide-img { object-position: 50% center; }
+    .confisene-hero .confisene-slide-3 .confisene-slide-img { object-position: 56% center; }
+    .confisene-hero .confisene-slide-4 .confisene-slide-img { object-position: 58% center; }
 }
 
-/* xxl : ≥ 1400px — grand écran, recadrage minimal */
+/* xxl : ≥ 1400px */
 @media (min-width: 1400px) {
-    .confisene-hero .carousel-item img.confisene-slide-img {
-        object-fit: cover;
-    }
-
-    .confisene-hero .confisene-slide-1 img.confisene-slide-img {
-        object-position: 54% 42%;
-    }
-
-    .confisene-hero .confisene-slide-2 img.confisene-slide-img {
-        object-position: 50% 48%;
-    }
-
-    .confisene-hero .confisene-slide-3 img.confisene-slide-img {
-        object-position: 56% 38%;
-    }
-
-    .confisene-hero .confisene-slide-4 img.confisene-slide-img {
-        object-position: 58% 40%;
-    }
+    .confisene-hero .confisene-slide-1 .confisene-slide-img { object-position: 50% center; }
+    .confisene-hero .confisene-slide-2 .confisene-slide-img { object-position: 50% center; }
+    .confisene-hero .confisene-slide-3 .confisene-slide-img { object-position: 54% center; }
+    .confisene-hero .confisene-slide-4 .confisene-slide-img { object-position: 56% center; }
 }
 
 /* ——— Stats ——— */
