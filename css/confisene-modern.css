@@ -158,11 +158,37 @@ h1, h2, h3, h4, h5, h6,
     min-height: 85vh;
 }
 
-.confisene-hero .carousel-item img {
+/* Hero slides — contain par défaut pour préserver logos, visages et produits */
+.confisene-hero .carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.confisene-hero .carousel-item img.confisene-slide-img {
     width: 100%;
     height: 85vh;
-    object-fit: cover;
-    object-position: center;
+    object-fit: contain;
+    object-position: center center;
+    position: static !important;
+}
+
+/* Fonds assortis aux visuels (letterboxing en mode contain) */
+.confisene-hero .confisene-slide-1 {
+    background: linear-gradient(135deg, #ffe566 0%, #ffb84d 55%, #f5a623 100%);
+}
+
+.confisene-hero .confisene-slide-2 {
+    background: linear-gradient(90deg, #5cb85c 0%, #f0ad4e 48%, #e85d4a 100%);
+}
+
+.confisene-hero .confisene-slide-3 {
+    background: linear-gradient(135deg, #a8e063 0%, #56ab2f 55%, #2d8a3e 100%);
+}
+
+.confisene-hero .confisene-slide-4 {
+    background: linear-gradient(135deg, #e8f6fc 0%, #c5e8f7 45%, #89c9e8 100%);
 }
 
 .confisene-hero::after {
@@ -228,13 +254,120 @@ h1, h2, h3, h4, h5, h6,
     border-color: var(--begue-green);
 }
 
-@media (max-width: 768px) {
+/* ——— Hero carousel responsive (Bootstrap breakpoints) ——— */
+
+/* xs / sm : < 768px — image entière, hauteur 70vh */
+@media (max-width: 767.98px) {
     .confisene-hero #header-carousel,
     .confisene-hero .carousel-inner,
     .confisene-hero .carousel-item,
-    .confisene-hero .carousel-item img {
+    .confisene-hero .carousel-item img.confisene-slide-img {
         min-height: 70vh;
         height: 70vh;
+    }
+
+    /* Slide 1 : homme + sachet à droite, logo à gauche */
+    .confisene-hero .confisene-slide-1 img.confisene-slide-img {
+        object-position: 58% center;
+    }
+
+    /* Slide 2 : sucettes à gauche, enfant à droite */
+    .confisene-hero .confisene-slide-2 img.confisene-slide-img {
+        object-position: 50% center;
+    }
+
+    /* Slide 3 : femme + produit à droite */
+    .confisene-hero .confisene-slide-3 img.confisene-slide-img {
+        object-position: 62% 42%;
+    }
+
+    /* Slide 4 : homme + bonbon géant à droite */
+    .confisene-hero .confisene-slide-4 img.confisene-slide-img {
+        object-position: 65% 42%;
+    }
+}
+
+/* md : 768px – 991px — tablette, image entière */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .confisene-hero .confisene-slide-1 img.confisene-slide-img {
+        object-position: 55% 44%;
+    }
+
+    .confisene-hero .confisene-slide-2 img.confisene-slide-img {
+        object-position: 48% 50%;
+    }
+
+    .confisene-hero .confisene-slide-3 img.confisene-slide-img {
+        object-position: 58% 40%;
+    }
+
+    .confisene-hero .confisene-slide-4 img.confisene-slide-img {
+        object-position: 60% 42%;
+    }
+}
+
+/* lg : 992px – 1199px — image entière (contain), léger décalage visuel */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .confisene-hero .confisene-slide-1 img.confisene-slide-img {
+        object-position: 54% 44%;
+    }
+
+    .confisene-hero .confisene-slide-2 img.confisene-slide-img {
+        object-position: 50% 50%;
+    }
+
+    .confisene-hero .confisene-slide-3 img.confisene-slide-img {
+        object-position: 56% 40%;
+    }
+
+    .confisene-hero .confisene-slide-4 img.confisene-slide-img {
+        object-position: 58% 42%;
+    }
+}
+
+/* xl : 1200px – 1399px — desktop large, cover affiné */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .confisene-hero .carousel-item img.confisene-slide-img {
+        object-fit: cover;
+    }
+
+    .confisene-hero .confisene-slide-1 img.confisene-slide-img {
+        object-position: 56% 42%;
+    }
+
+    .confisene-hero .confisene-slide-2 img.confisene-slide-img {
+        object-position: 49% 48%;
+    }
+
+    .confisene-hero .confisene-slide-3 img.confisene-slide-img {
+        object-position: 58% 38%;
+    }
+
+    .confisene-hero .confisene-slide-4 img.confisene-slide-img {
+        object-position: 60% 40%;
+    }
+}
+
+/* xxl : ≥ 1400px — grand écran, recadrage minimal */
+@media (min-width: 1400px) {
+    .confisene-hero .carousel-item img.confisene-slide-img {
+        object-fit: cover;
+    }
+
+    .confisene-hero .confisene-slide-1 img.confisene-slide-img {
+        object-position: 54% 42%;
+    }
+
+    .confisene-hero .confisene-slide-2 img.confisene-slide-img {
+        object-position: 50% 48%;
+    }
+
+    .confisene-hero .confisene-slide-3 img.confisene-slide-img {
+        object-position: 56% 38%;
+    }
+
+    .confisene-hero .confisene-slide-4 img.confisene-slide-img {
+        object-position: 58% 40%;
     }
 }
 
