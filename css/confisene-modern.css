@@ -885,6 +885,16 @@ body.confisene-gallery {
     box-shadow: var(--begue-shadow);
 }
 
+.confisene-youtube-section {
+    background: var(--begue-light, #f5f6f8);
+}
+
+.confisene-youtube-embed iframe {
+    border: 0;
+    border-radius: var(--begue-radius-lg);
+    box-shadow: var(--begue-shadow);
+}
+
 /* ——— Galerie : barre de navigation unifiée ——— */
 .confisene-gallery-topnav {
     background: var(--begue-white);
