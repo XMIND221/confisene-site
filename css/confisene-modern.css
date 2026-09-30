@@ -757,6 +757,19 @@ body.confisene-gallery {
     padding: 2rem 1.5rem 4rem;
 }
 
+.confisene-gallery-subtitle {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--begue-black, #1a1a1a);
+    margin: 1.5rem 0 0.75rem;
+}
+
+.confisene-product-flavor {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0;
+}
+
 .confisene-gallery-section-title {
     font-size: 1.35rem;
     font-weight: 700;
