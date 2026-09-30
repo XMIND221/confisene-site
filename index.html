@@ -311,15 +311,18 @@
                         </div>
                     </div>
                     <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
-                        <ul class="nav nav-pills d-inline-flex justify-content-end mb-5 confisene-product-tabs">
+                        <ul class="nav nav-pills d-inline-flex justify-content-end mb-5 confisene-product-tabs" id="product-filters">
                             <li class="nav-item me-2">
-                                <span class="btn btn-outline-primary border-2 active">Bonbons</span>
+                                <button type="button" class="btn btn-outline-primary border-2 active" data-product-filter="tous">Tous</button>
                             </li>
                             <li class="nav-item me-2">
-                                <span class="btn btn-outline-primary border-2">Tangal</span>
+                                <button type="button" class="btn btn-outline-primary border-2" data-product-filter="bonbons">Bonbons</button>
                             </li>
                             <li class="nav-item me-2">
-                                <span class="btn btn-outline-primary border-2">Biscuits</span>
+                                <button type="button" class="btn btn-outline-primary border-2" data-product-filter="tangal">Tangal</button>
+                            </li>
+                            <li class="nav-item me-2">
+                                <button type="button" class="btn btn-outline-primary border-2" data-product-filter="biscuits">Biscuits</button>
                             </li>
                             <li class="nav-item me-0">
                                 <a class="btn btn-primary border-2" href="galerie/index.html">Galerie complète</a>
@@ -358,75 +361,150 @@
                                 
                             </div>
                         </div> -->
-                            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="product-item">
-                                    <div class="position-relative bg-light overflow-hidden">
-                                        <span class="confisene-product-badge">Tangal</span>
-                                        <img class="img-fluid w-100" src="img/produit-passion.jpg" alt="Bégué Fruit de la passion" loading="lazy" />
+                            <div class="col-12 confisene-product-group" data-product-group="bonbons">
+                                <h3 class="confisene-product-group-title">Bonbons</h3>
+                                <div class="row g-4">
+                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="position-relative bg-light overflow-hidden">
+                                                <span class="confisene-product-badge">Bonbons</span>
+                                                <img class="img-fluid w-100" src="img/gamme-bonbon-menthe.png" alt="Bégué Menthe fraîche" loading="lazy" />
+                                            </div>
+                                            <div class="text-center p-4">
+                                                <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Menthe fraîche</a>
+                                                <span class="text-primary me-1">Menthe fraîche</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="text-center p-4">
-                                        <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Fruit de la passion</a>
-                                        <span class="text-primary me-1">Fruit de passion</span>
+                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="position-relative bg-light overflow-hidden">
+                                                <span class="confisene-product-badge">Bonbons</span>
+                                                <img class="img-fluid w-100" src="img/gamme-bonbon-ananas.png" alt="Bégué Ananas" loading="lazy" />
+                                            </div>
+                                            <div class="text-center p-4">
+                                                <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Ananas</a>
+                                                <span class="text-primary me-1">Ananas</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="product-item">
-                                    <div class="position-relative bg-light overflow-hidden">
-                                        <span class="confisene-product-badge">Tangal</span>
-                                        <img class="img-fluid w-100" src="img/produit-fraise.jpg" alt="Bégué Fraise" loading="lazy" />
-                                    </div>
-                                    <div class="text-center p-4">
-                                        <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Fraise</a>
-                                        <span class="text-primary me-1">Fraise</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="product-item">
-                                    <div class="position-relative bg-light overflow-hidden">
-                                        <span class="confisene-product-badge">Tangal</span>
-                                        <img class="img-fluid w-100" src="img/produit-caramel.jpg" alt="Bégué Caramel" loading="lazy" />
-                                    </div>
-                                    <div class="text-center p-4">
-                                        <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Caramel</a>
-                                        <span class="text-primary me-1">Caramel</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="product-item">
-                                    <div class="position-relative bg-light overflow-hidden">
-                                        <span class="confisene-product-badge">Tangal</span>
-                                        <img class="img-fluid w-100" src="img/produit-mangue.jpg" alt="Bégué Mangue" loading="lazy" />
-                                    </div>
-                                    <div class="text-center p-4">
-                                        <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Mangue</a>
-                                        <span class="text-primary me-1">Mangue</span>
+                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="position-relative bg-light overflow-hidden">
+                                                <span class="confisene-product-badge">Bonbons</span>
+                                                <img class="img-fluid w-100" src="img/gamme-bonbon-gingembre.png" alt="Bégué Gingembre" loading="lazy" />
+                                            </div>
+                                            <div class="text-center p-4">
+                                                <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Gingembre</a>
+                                                <span class="text-primary me-1">Gingembre</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="product-item">
-                                    <div class="position-relative bg-light overflow-hidden">
-                                        <span class="confisene-product-badge">Bonbons</span>
-                                        <img class="img-fluid w-100" src="img/produit-gingembre.jpg" alt="Bégué Gingembre" loading="lazy" />
+                            <div class="col-12 confisene-product-group" data-product-group="tangal">
+                                <h3 class="confisene-product-group-title">Tangal</h3>
+                                <div class="row g-4">
+                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="position-relative bg-light overflow-hidden">
+                                                <span class="confisene-product-badge">Tangal</span>
+                                                <img class="img-fluid w-100" src="img/gamme-tangal-passion.jpg" alt="Bégué Fruits de la passion" loading="lazy" />
+                                            </div>
+                                            <div class="text-center p-4">
+                                                <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Fruits de la passion</a>
+                                                <span class="text-primary me-1">Fruits de la passion</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="text-center p-4">
-                                        <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Gingembre</a>
-                                        <span class="text-primary me-1">Gingembre</span>
+                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="position-relative bg-light overflow-hidden">
+                                                <span class="confisene-product-badge">Tangal</span>
+                                                <img class="img-fluid w-100" src="img/gamme-tangal-fraise.png" alt="Bégué Fraise" loading="lazy" />
+                                            </div>
+                                            <div class="text-center p-4">
+                                                <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Fraise</a>
+                                                <span class="text-primary me-1">Fraise</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="position-relative bg-light overflow-hidden">
+                                                <span class="confisene-product-badge">Tangal</span>
+                                                <img class="img-fluid w-100" src="img/gamme-tangal-caramel.png" alt="Bégué Caramel beurre salé" loading="lazy" />
+                                            </div>
+                                            <div class="text-center p-4">
+                                                <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Caramel beurre salé</a>
+                                                <span class="text-primary me-1">Caramel beurre salé</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="position-relative bg-light overflow-hidden">
+                                                <span class="confisene-product-badge">Tangal</span>
+                                                <img class="img-fluid w-100" src="img/gamme-tangal-mangue.png" alt="Bégué Mangue" loading="lazy" />
+                                            </div>
+                                            <div class="text-center p-4">
+                                                <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Mangue</a>
+                                                <span class="text-primary me-1">Mangue</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                                <div class="product-item">
-                                    <div class="position-relative bg-light overflow-hidden">
-                                        <span class="confisene-product-badge">Bonbons</span>
-                                        <img class="img-fluid w-100" src="img/produit-menthe.jpg" alt="Bégué Menthe fraîche" loading="lazy" />
+                            <div class="col-12 confisene-product-group" data-product-group="biscuits">
+                                <h3 class="confisene-product-group-title">Biscuits</h3>
+                                <div class="row g-4">
+                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="position-relative bg-light overflow-hidden">
+                                                <span class="confisene-product-badge">Biscuits</span>
+                                                <img class="img-fluid w-100" src="img/gamme-biscuit-beurre.png" alt="Bégué Biscuits beurre" loading="lazy" />
+                                            </div>
+                                            <div class="text-center p-4">
+                                                <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Biscuits beurre</a>
+                                                <span class="text-primary me-1">Beurre</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="text-center p-4">
-                                        <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Menthe fraîche</a>
-                                        <span class="text-primary me-1">Menthe fraîche</span>
+                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="position-relative bg-light overflow-hidden">
+                                                <span class="confisene-product-badge">Biscuits</span>
+                                                <img class="img-fluid w-100" src="img/gamme-biscuit-coco.png" alt="Bégué Biscuits coco" loading="lazy" />
+                                            </div>
+                                            <div class="text-center p-4">
+                                                <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Biscuits coco</a>
+                                                <span class="text-primary me-1">Coco</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="position-relative bg-light overflow-hidden">
+                                                <span class="confisene-product-badge">Biscuits</span>
+                                                <img class="img-fluid w-100" src="img/gamme-biscuit-coco-barre.png" alt="Bégué Biscuits coco en barre" loading="lazy" />
+                                            </div>
+                                            <div class="text-center p-4">
+                                                <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Biscuits coco</a>
+                                                <span class="text-primary me-1">Coco — barre</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-md-6">
+                                        <div class="product-item">
+                                            <div class="position-relative bg-light overflow-hidden">
+                                                <span class="confisene-product-badge">Biscuits</span>
+                                                <img class="img-fluid w-100" src="img/gamme-biscuit-gingembre.png" alt="Bégué Biscuits gingembre" loading="lazy" />
+                                            </div>
+                                            <div class="text-center p-4">
+                                                <a class="d-block h5 mb-2" href="galerie/index.html">Bégué Biscuits gingembre</a>
+                                                <span class="text-primary me-1">Gingembre</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1167,6 +1245,23 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script>
+            (function () {
+                var buttons = document.querySelectorAll("[data-product-filter]");
+                var groups = document.querySelectorAll("[data-product-group]");
+                buttons.forEach(function (button) {
+                    button.addEventListener("click", function () {
+                        var filter = button.getAttribute("data-product-filter");
+                        buttons.forEach(function (item) { item.classList.remove("active"); });
+                        button.classList.add("active");
+                        groups.forEach(function (group) {
+                            var match = filter === "tous" || group.getAttribute("data-product-group") === filter;
+                            group.classList.toggle("is-hidden", !match);
+                        });
+                    });
+                });
+            })();
+        </script>
         <script>
             (function () {
                 function hideSpinner() {

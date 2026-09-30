@@ -861,7 +861,30 @@ body.confisene-gallery {
 }
 
 .confisene-product-tabs .btn {
-    pointer-events: none;
+    pointer-events: auto;
+}
+
+.confisene-product-group + .confisene-product-group {
+    margin-top: 2.5rem;
+}
+
+.confisene-product-group-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--begue-green);
+    margin: 0.25rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--begue-yellow);
+}
+
+.confisene-product-group.is-hidden {
+    display: none;
+}
+
+.confisene-site .product-item img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
 }
 
 .confisene-product-tabs a.btn {
